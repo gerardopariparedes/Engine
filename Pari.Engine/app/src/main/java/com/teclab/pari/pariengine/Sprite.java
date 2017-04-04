@@ -15,7 +15,7 @@ public class Sprite extends DisplayObject{
        int[] DIRECTION_TO_ANIMATION_MAP = { 3, 1, 0, 2 };
 
        private static final int BMP_ROWS = 4;
-       private static final int BMP_COLUMNS = 3;
+       private static final int BMP_CO UMNS = 3;
        private static final int MAX_SPEED = 5;
        private Bitmap bmp;
        public int xSpeed;
