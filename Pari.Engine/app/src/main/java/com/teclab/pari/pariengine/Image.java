@@ -6,22 +6,27 @@ import android.graphics.Canvas;
 
 public class Image extends DisplayObject {
 
-       private Bitmap bmp;
+    private Bitmap bmp;
+
+    String key;
 
 
-       public Image(String id, Resources resources) {
-            super(resources);
-            bmp = this.resources.getBmp(id);
+    public void Image(String _key, String _tag, int Source, Resource _resources)
+    {
 
-       }
+        this.resources = _resource;
+        this.key = _key;
+        resources.LoadTexture(this.key, Source);
 
- 
 
-       public void onDraw(Canvas canvas) {
-              super.onDraw(canvas);
-              canvas.drawBitmap(bmp, x, y, null);
+    }
 
-       }
 
+    public void onDraw() {
+      Paint p =new Paint();
+        canvas.drawBitmap(  resources.getTexture(key), this.x,this.y, p);
+
+        (int)(leftcorner=this.x-(width*0.5f));
+    }
 
 }

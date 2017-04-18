@@ -29,8 +29,16 @@ public class DisplayObject {
 
 
 
-    public DisplayObject(Resources resources){
-        this.resources = resources;
+    public DisplayObject( ){
+       x=y=0;
+        scaleX=scaleY=1.0F;
+        rotation=0;
+        pivotX=pivotY=0;
+        opacity=1.0F;
+        width=height=0;
+        visible=true;
+        parent=null;
+        transformation=new Transformation(this);
     }
   public  void dispatchEvent(Event e){
 
